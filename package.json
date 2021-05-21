@@ -1,0 +1,26 @@
+{
+  "name": "Express-Games",
+  "version": "1.0.0",
+  "description": "ONLY .gitignore node_modules\\\\\\*",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Josebosquez/Express-Games.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Josebosquez/Express-Games/issues"
+  },
+  "homepage": "https://github.com/Josebosquez/Express-Games#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "uuid": "^8.3.2"
+  }
+}
