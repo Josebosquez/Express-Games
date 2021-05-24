@@ -71,7 +71,7 @@ router.put('/update-game/:id', function (req, res) {
     let foundTeam;
     canUpdate = false;
 
-    games.forEach(function (item, index) {
+    games.forEach(function (item) {
         if (item.game === req.params.game) {
             canUpdate = true;
             foundTeam = item;
@@ -104,9 +104,6 @@ router.put('/update-game/:id', function (req, res) {
     //         res.json({message: "game not found, cannot update"})
     //     }
     // })
-
-
-
 })
 
 router.delete('/delete-game/:id', function (req,res){
@@ -118,8 +115,24 @@ router.delete('/delete-game/:id', function (req,res){
         games.splice(delGame,1);
         res.json({payload: games})
     }
-
 })
 
+
+router.get('/get-game-by-name/:name', function(req, res){
+    let name = req.params.name;
+    let game;
+
+    games.forEach((item)=>{
+        if (item.name === name){
+            game = item
+        } else {
+            res.json({message: "The game does not exist, please check name" })
+        }
+    })
+
+    if (game){
+        res.json({game})
+    } 
+})
 
 module.exports = router
