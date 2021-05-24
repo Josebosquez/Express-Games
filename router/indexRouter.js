@@ -1,5 +1,9 @@
-const express = require('express')
+const express = require('express');
 const router = express.Router();
-const uuidv4 = require('uuid').v4
+
+
+router.get('/check', function (req, res){
+    res.json({message: "Welcome to Games info App"})
+})
 
 module.exports = router
